@@ -7,9 +7,8 @@ import { ServersService } from '../servers.service';
 
 })
 export class ServersComponent implements OnInit {
-  servers;
+  
   constructor( private serversService: ServersService) {
-    this.servers = this.serversService.servers;
    }
 
   ngOnInit(): void {
