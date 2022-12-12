@@ -32,4 +32,10 @@ export class ServersService {
   users(): Observable<interfaceUser[]>{
     return this.http.get<interfaceUser[]>(this.url)
   }
+
+  user(id: string): Observable<interfaceUser>{
+    return this.http.get<interfaceUser>(`${this.url}/${id}`)
+  }
+
+
 }
