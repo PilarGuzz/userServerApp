@@ -29,6 +29,11 @@ export class ServersService {
 
   constructor(private http : HttpClient) { }
 
+
+  getServer(id: number){
+    return this.servers.filter(server => server.id == id)
+  }
+
   users(): Observable<interfaceUser[]>{
     return this.http.get<interfaceUser[]>(this.url)
   }
