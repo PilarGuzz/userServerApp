@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { interfaceUser } from '../users/interface/user';
+import { interfaceServer } from './interface/server';
 
 
 @Injectable({
   providedIn: 'root',
 })
 export class ServersService {
-  servers = [
+  servers: interfaceServer[] = [
     {
       id: 1,
       name: 'Productionserver',
@@ -31,7 +32,7 @@ export class ServersService {
 
 
   getServer(id: number){
-    return this.servers.filter(server => server.id == id)
+    return this.servers.filter(server => server.id == id)[0];
   }
 
   users(): Observable<interfaceUser[]>{

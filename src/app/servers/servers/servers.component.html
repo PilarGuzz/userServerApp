@@ -7,8 +7,7 @@
     estado del servidor-->
     <div class="card mt-2" *ngFor="let server of resultsServers" 
     [routerLink]="['/servers', server.id]"
-    [queryParams]="{allowEdit: '1'}"
-    fragment="loading"
+    
     >
       <div class="card-header">{{server.name}}</div>
 
